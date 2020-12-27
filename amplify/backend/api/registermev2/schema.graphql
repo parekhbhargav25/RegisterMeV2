@@ -1,0 +1,59 @@
+type Appointment @model {
+  id: ID!
+  FirstName: String!
+  LastName: String!
+  Email: String!
+  City: String!
+  Date: AWSDate!
+  Time: AWSTime!
+  PhoneNumber: String!
+  Note: String!
+  createdAt: AWSDateTime!
+  updatedAt: AWSDateTime!
+  BusinessID: String!
+  CustomerID: String!
+}
+
+type TestData @model {
+  id: ID!
+  businessName: String!
+  businessImg: String!
+  businessPhone: String!
+  businessEmail: String!
+  businessID: String!
+  custID: String!
+  dateTime: AWSDateTime!
+  type: String!
+  duration: Int!
+  status: String!
+}
+
+type BusinessProfile @model {
+  id: ID!
+  businessProfileID: String!
+  businessName: String!
+  businessAddress: String!
+  businessImg: String!
+  phoneNumber: String!
+  businessEmail: String!
+  city: String!
+  province: String!
+  postalCode: String!
+  services: AWSJSON
+  dayOpen: AWSJSON
+  workingHours: AWSJSON
+}
+type Messages @model {
+  id: ID!
+  Message: String!
+  ProfileID: String!
+}
+
+type CustomerProfile @model {
+  id: ID!
+  email: String!
+  firstName: String!
+  lastName: String!
+  customerProfileID: String!
+  messageDelivery: AWSJSON
+}
